@@ -3827,7 +3827,7 @@ def tune_model_supervised(
         - 'scikit-optimize' - scikit-optimize. ``pip install scikit-optimize`` https://scikit-optimize.github.io/stable/
         - 'tune-sklearn' - Ray Tune scikit API. Does not support GPU models.
           ``pip install tune-sklearn ray[tune]`` https://github.com/ray-project/tune-sklearn
-        - 'optuna' - Optuna. ``pip install optuna`` https://optuna.org/
+        - 'optuna' - Optuna. ``pip install optuna<3.0.0`` https://optuna.org/
 
     search_algorithm: str, default = None
         The search algorithm to be used for finding the best hyperparameters.
@@ -3852,7 +3852,7 @@ def tune_model_supervised(
         - 'hyperopt' - Tree-structured Parzen Estimator search using Hyperopt
           ``pip install hyperopt``
         - 'optuna' - Tree-structured Parzen Estimator search using Optuna
-          ``pip install optuna``
+          ``pip install optuna<3.0.0``
         - 'bohb' - Bayesian search using HpBandSter
           ``pip install hpbandster ConfigSpace``
 
@@ -4087,7 +4087,7 @@ def tune_model_supervised(
                 import optuna
             except ImportError:
                 raise ImportError(
-                    "'optuna' requires optuna package to be installed. Do: pip install optuna"
+                    "'optuna' requires optuna package to be installed. Do: pip install optuna<3.0.0"
                 )
 
     elif search_library == "optuna":
@@ -4095,7 +4095,7 @@ def tune_model_supervised(
             import optuna
         except ImportError:
             raise ImportError(
-                "'optuna' requires optuna package to be installed. Do: pip install optuna"
+                "'optuna' requires optuna package to be installed. Do: pip install optuna<3.0.0"
             )
 
         if not search_algorithm:

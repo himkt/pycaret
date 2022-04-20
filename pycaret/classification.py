@@ -1060,7 +1060,7 @@ def tune_model(
         - 'tune-sklearn' - ``pip install tune-sklearn ray[tune]``
             https://github.com/ray-project/tune-sklearn
 
-        - 'optuna' - ``pip install optuna``
+        - 'optuna' - ``pip install optuna<3.0.0``
             https://optuna.org/
 
 
@@ -1081,7 +1081,7 @@ def tune_model(
             - 'grid' : grid search
             - 'bayesian' : ``pip install scikit-optimize``
             - 'hyperopt' : ``pip install hyperopt``
-            - 'optuna' : ``pip install optuna``
+            - 'optuna' : ``pip install optuna<3.0.0``
             - 'bohb' : ``pip install hpbandster ConfigSpace``
 
         - 'optuna' possible values:
